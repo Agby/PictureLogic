@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.main {
+  witdh: 100vw;
+  height: 100vh;
+  position: relative;
+  left: 300px;
+}
+.resultArray {
+  display: flex;
+  height: 100%;
+  justify-content:
+    center;
+  align-items: center;
+}
+.cell {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  border: black 1px solid;
+  justify-content:
+    center;
+  align-items: center;
+  font-size: 0.6em;
+  background: skyblue;
+}
+.cell:nth-child(5n+0) {
+  border-bottom: black 2px solid;
+  background: white;
+}
+.column:nth-child(5n+0) {
+  & > .cell {
+      border-right: black 2px solid;
+  }
+}
+.column {
+  background: white;
+}
+.start {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50px;
+  top: 300px;
+  background: white;
+  text-align: end;
+  padding: 5px;
+  border: black 1px solid;
+  cursor: pointer;
+}
+.finish {
+  &.fill {
+    background: black;
+  }
+  &.null {
+    background: white;
+  }
+}
+.map-columns {
+  position: absolute;
+  display: flex;
+  top: -317px;
+  left: 98px;
+  height: 500px;
+  flex-flow: column;
+  transform: rotate(-90deg)
+}
+.map-rows {
+  display: flex;
+  flex-flow: column;
+}
+.map-array {
+  position: absolute;
+  top: 100px;
+}
+.input-item {
+  position: relative;
+  width: 100px;
+  margin: 6px 0px;
+  font-size: 0.8em;
+  left: -110px;
+  top: 100px;
+  .map-rows > & {
+    left: -110px;
+    top: 100px;
+    text-align: right;
+  }
+}
+.setTool {
+  position: absolute;
+  left: -250px;
+  top: 20px;
+  width: 100%;
+  hieght: 50%;
+  overfolow: visiable;
+}
+.set-input {
+  border-bottom: black 1px solid;
+  margin-left: 10px;
+  width: 50px;
+  font-size: 1em;
+  text-align: center;
+}
+.init-button {
+  width: 50px;
+  hieght: 50px;
+  margin-top: 20px;
+  border: black 1px solid;
+  cursor: pointer;
+  text-align: center;
+}
